@@ -27,6 +27,15 @@ configurations {
 }
 
 dependencies {
+	//dodane do wewnetrznej bazy
+	compile('javax.persistence:javax.persistence-api:2.2')
+	compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.3.2.RELEASE'
+	testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
+	//dodane
+	//postgreSQL
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	implementation('org.postgresql:postgresql')
+	//postgreSQL
 	implementation('com.vaadin:vaadin-spring-boot-starter') {
 //         Webjars are only needed when running in Vaadin 13 compatibility mode
 		["com.vaadin.webjar", "org.webjars.bowergithub.insites",

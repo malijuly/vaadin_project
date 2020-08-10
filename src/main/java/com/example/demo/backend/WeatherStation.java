@@ -2,13 +2,14 @@ package com.example.demo.backend;
 
 public class WeatherStation {
 
-    double temperature;
-    double humidity;    //wilgotnosc powitrza
-    double pressure;    //cisnienie potwietrza
-    double height;  //wysokosc
-    double UVLevel; //natezenie promieniowania UV
+    String temperature;
+    String humidity;    //wilgotnosc powitrza
+    String pressure;    //cisnienie potwietrza
+    String height;      //wysokosc
+    String UVLevel;     //natezenie promieniowania UV
 
-    public WeatherStation(double temperature, double humidity, double pressure, double height, double UVLevel) {
+
+    public WeatherStation(String temperature, String humidity, String pressure, String height, String UVLevel) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
@@ -16,43 +17,43 @@ public class WeatherStation {
         this.UVLevel = UVLevel;
     }
 
-    public double getTemperature() {
+    public String getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(double temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 
-    public double getHumidity() {
+    public String getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(double humidity) {
+    public void setHumidity(String humidity) {
         this.humidity = humidity;
     }
 
-    public double getPressure() {
+    public String getPressure() {
         return pressure;
     }
 
-    public void setPressure(double pressure) {
+    public void setPressure(String pressure) {
         this.pressure = pressure;
     }
 
-    public double getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public double getUVLevel() {
+    public String getUVLevel() {
         return UVLevel;
     }
 
-    public void setUVLevel(double UVLevel) {
+    public void setUVLevel(String UVLevel) {
         this.UVLevel = UVLevel;
     }
 }
