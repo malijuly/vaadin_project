@@ -1,4 +1,4 @@
-package com.example.demo.backend;
+package com.nextbuy.demo.backend;
 
 public class WeatherStation {
 
@@ -56,4 +56,6 @@ public class WeatherStation {
     public void setUVLevel(String UVLevel) {
         this.UVLevel = UVLevel;
     }
+
+
 }

@@ -1,22 +1,22 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'org.springframework.boot' version '2.3.2.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
-	id 'com.vaadin' version '0.7.0'
+	id 'com.vaadin' version '0.8.0'
 }
 
 defaultTasks("clean", "build")
 
-group = 'com.example'
+group = 'com.nextbuy'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '14'
 
 repositories {
 	mavenCentral()
 }
 
 ext {
-	set('vaadinVersion', "14.2.0")
+	set('vaadinVersion', "14.3.2")
 }
 
 configurations {
@@ -27,26 +27,19 @@ configurations {
 }
 
 dependencies {
-	//dodane do wewnetrznej bazy
-	compile('javax.persistence:javax.persistence-api:2.2')
-	compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.3.2.RELEASE'
-	testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
-	//dodane
-	//postgreSQL
-	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-	implementation('org.postgresql:postgresql')
-	//postgreSQL
-	implementation('com.vaadin:vaadin-spring-boot-starter') {
-//         Webjars are only needed when running in Vaadin 13 compatibility mode
-		["com.vaadin.webjar", "org.webjars.bowergithub.insites",
-		 "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
-		 "org.webjars.bowergithub.vaadin", "org.webjars.bowergithub.webcomponents"]
-				.forEach { group -> exclude(group: group) }
-	}
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'com.vaadin:vaadin-spring-boot-starter'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'p6spy:p6spy:3.9.1'
 }
 
 dependencyManagement {

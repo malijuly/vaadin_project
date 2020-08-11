@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.nextbuy.demo.ui;
 
 public class GreetService {
 
