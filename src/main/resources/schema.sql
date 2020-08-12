@@ -16,10 +16,3 @@ create table data_weather (
     temperature varchar(255),
     primary key (id)
 );
-
-create table magda (
-    id bigint not null,
-    name varchar(255),
-    population integer not null,
-    primary key (id)
-);

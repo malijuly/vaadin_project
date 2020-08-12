@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-//WIFI CONNECTION
+//WIFI CONNECTION  -- READS DATA
 public class WiFiConn {
 
 
@@ -61,6 +61,7 @@ public class WiFiConn {
 
     }
 
+    //reading
     private void whileConnected() throws IOException {
 
         do {
